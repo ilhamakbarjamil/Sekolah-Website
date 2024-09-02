@@ -1,4 +1,4 @@
-<?php include 'database/database.php'; ?>
+<?php include "Database/database.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -234,7 +234,7 @@
     <div class="menu">
       <a href="#home"><i class="fas fa-home" id="Home"></i> Home</a>
       <a href="#ppdb" onclick="showDaftarAlert()"><i class="fas fa-user-plus" id="PPDB"></i> PPDB</a>
-      <a href="login\login.php"><i class="fas fa-sign-in-alt" id="login"></i> Login</a>
+      <a href="Login\login.php"><i class="fas fa-sign-in-alt" id="login"></i> Login</a>
     </div>
   </div>
 
@@ -281,7 +281,7 @@
           </div>
         </div>
         <a
-          href="login\login.php"
+          href="Login\login.php"
           class="btn-learn-more"
           style="margin-top: 50px; text-align: right; display: inline-block">Sign In</a>
         <p>*Menu login hanya tersedia untuk wali murid dan guru</p>
@@ -551,7 +551,8 @@
         <h2 class="section-title">Our Gallery</h2>
         <div class="gallery-grid">
           <?php
-          include "database/database.php";  // Make sure to include your database connection file
+          include "Database/database.php";
+
 
           $sql = "SELECT * FROM tb_updatefoto ORDER BY id DESC LIMIT 8";
           $result = $conn->query($sql);
