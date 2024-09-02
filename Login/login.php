@@ -27,9 +27,9 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
         $_SESSION['user_logged_in'] = true;
         
         if ($user['admin_type'] == 'kelas_a') {
-            header("Location: adminkelasA.php");
+            header("Location: ../Admin_A/adminkelasA.php");
         } elseif ($user['admin_type'] == 'kelas_b') {
-            header("Location: adminkelasB.php");
+            header("Location: ../Admin_B/adminkelasB.php");
         }
         exit();
     }
